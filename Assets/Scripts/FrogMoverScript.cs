@@ -6,11 +6,15 @@ using UnityEngine.InputSystem;
 
 public class FrogMoverScript : MonoBehaviour
 {
-    [SerializeField] float stepSize = 1f;
-    [SerializeField] InputAction moveUp = new InputAction(type: InputActionType.Button);
-    [SerializeField] InputAction moveDown = new InputAction(type: InputActionType.Button);
-    [SerializeField] InputAction moveRight = new InputAction(type: InputActionType.Button);
-    [SerializeField] InputAction moveLeft = new InputAction(type: InputActionType.Button);
+    [SerializeField] protected float stepSize = 1f;
+    [SerializeField] protected InputAction moveUp = new InputAction(type: InputActionType.Button);
+    [SerializeField] protected InputAction moveDown = new InputAction(type: InputActionType.Button);
+    [SerializeField] protected InputAction moveRight = new InputAction(type: InputActionType.Button);
+    [SerializeField] protected InputAction moveLeft = new InputAction(type: InputActionType.Button);
+
+    [SerializeField] protected float minXAxisBound = -8f;
+    [SerializeField] protected float maxXAxisBound = 8f;
+    [SerializeField] protected float minYAxisBound = -3.5f;
 
     void OnEnable()
     {
@@ -28,12 +32,6 @@ public class FrogMoverScript : MonoBehaviour
         moveLeft.Disable();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -41,14 +39,14 @@ public class FrogMoverScript : MonoBehaviour
         {
             transform.position += new Vector3(0, stepSize, 0);
         }
-        else if (moveDown.WasPressedThisFrame())
+        else if (moveDown.WasPressedThisFrame() && transform.position.y >= minYAxisBound)
         {
             transform.position += new Vector3(0, -stepSize, 0);
         }
-        else if (moveRight.WasPressedThisFrame())
+        else if (moveRight.WasPressedThisFrame() && transform.position.x < maxXAxisBound)
         {
             transform.position += new Vector3(stepSize, 0, 0);
-        } else if (moveLeft.WasPressedThisFrame())
+        } else if (moveLeft.WasPressedThisFrame() && transform.position.x > minXAxisBound)
         {
             transform.position += new Vector3(-stepSize, 0, 0);
         }

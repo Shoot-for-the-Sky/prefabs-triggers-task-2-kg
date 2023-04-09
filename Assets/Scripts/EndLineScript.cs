@@ -1,29 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EndLineScript : MonoBehaviour
 {
-    [SerializeField] string triggeringTag;
+    [SerializeField] protected string triggeringTag;
+    [SerializeField] protected LogicManager logicManager;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("other tag: " + other.tag);
         if (other.tag == triggeringTag && enabled)
         {
-            Debug.Log("Win Game!!");
+            logicManager.WinGame();
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
