@@ -5,13 +5,13 @@
 
 ## Gameplay
 
-### Lose the game:
+### Lose the game
 ![lose_gif](Gifs/lose_gif.gif)
 
-###  Win the game:
+###  Win the game
 ![win_gif](Gifs/win_gif.gif)
 
-###  Play Again:
+###  Play Again
 ![play_again_gif](Gifs/play_again_gif.gif)
 
 ## Extra Cool Features In The Game
@@ -24,7 +24,8 @@
 4. There is a `Logic Manager` script that controlling the general game functions as: `RestartGame`, `GameOver`, `WinGame` and `SetEndScreenTitle`.
     * [See Code Here](Assets/Scripts/LogicManager.cs)
 5. If the frog run over by a car it's change is sprite object to a brown puddle and cannot move anymore (because the game is over), also if the frog win the game the player cannot move the frog anymore.
-6. There is a transparent tree that separate from the background:
+6. The player can control the for moving in all directions: `up`, `down`, `ledf` and `right`. 
+7. There is a transparent tree that separate from the background:
    1. Tree in Background Game Object: <br> ![BackgroundTreeScreenshotScene.png](Images/BackgroundTreeScreenshotScene.png)
    2. Tree Screenshot <br> ![BackgroundTreeScreenshot.png](Images/BackgroundTreeScreenshot.png)
-7. All the of the game illustrations (background images, player and cars) are taken from the internet (free) and edited in `Adobe Illustrator` software.
+8. All the of the game illustrations (background images, player and cars) are taken from the internet (free) and edited in `Adobe Illustrator` software.
