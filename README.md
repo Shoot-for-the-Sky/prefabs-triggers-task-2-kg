@@ -27,7 +27,7 @@
 4. There is a `Logic Manager` script that controlling the general game functions as: `RestartGame`, `GameOver`, `WinGame` and `SetEndScreenTitle`.
     * [See Code Here](Assets/Scripts/LogicManager.cs)
 5. If the frog run over by a car it's change is sprite object to a brown puddle and cannot move anymore (because the game is over), also if the frog win the game the player cannot move the frog anymore.
-6. The player can control the for moving in all directions: `up`, `down`, `ledf` and `right`. 
+6. The player can control the for moving in all directions: `up`, `down`, `ledf` and `right`.
 7. There is a transparent tree that separate from the background:
    1. Tree in Background Game Object: <br> ![BackgroundTreeScreenshotScene.png](Images/BackgroundTreeScreenshotScene.png)
    2. Tree Screenshot <br> ![BackgroundTreeScreenshot.png](Images/BackgroundTreeScreenshot.png)
