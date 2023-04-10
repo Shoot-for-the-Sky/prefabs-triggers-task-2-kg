@@ -1,5 +1,4 @@
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +6,7 @@ public class LogicManager : MonoBehaviour
 {
     [SerializeField] protected GameObject gameOverScreen;
     [SerializeField] protected GameObject endScreenTitle;
+    [SerializeField] protected FrogMoverScript frogMoverScript;
 
     public void RestartGame()
     {
@@ -15,19 +15,20 @@ public class LogicManager : MonoBehaviour
 
     public void GameOver()
     {
+        frogMoverScript.disabled = true;
         gameOverScreen.SetActive(true);
         SetEndScreenTitle("Game Over!");
     }
 
-    public void WinGame() 
+    public void WinGame()
     {
+        frogMoverScript.disabled = true;
         gameOverScreen.SetActive(true);
         SetEndScreenTitle("Win Game!");
     }
 
     public void SetEndScreenTitle(string newTitle) 
     {
-        Warning.Info("SetEndScreenTitle: " + newTitle);
         endScreenTitle.GetComponent<TextMeshProUGUI>().text = newTitle.ToString();
     }
 }
