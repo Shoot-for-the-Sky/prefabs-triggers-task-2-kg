@@ -9,11 +9,11 @@
 
 ![lose_gif](Gifs/lose_gif.gif)
 
-###  Win the game
+### Win the game
 
 ![win_gif](Gifs/win_gif.gif)
 
-###  Play Again
+### Play Again
 
 ![play_again_gif](Gifs/play_again_gif.gif)
 
